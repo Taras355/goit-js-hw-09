@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #212121;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* 01-color-switcher */
+
+.switcher__container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.switcher__container button {
+  text-transform: uppercase;
+  width: 125px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #dddddd;
+  transition: all 200ms ease-out 0ms;
+}
+
+.switcher__container button:disabled {
+  cursor: not-allowed;
+}
+
+.switcher__container button:hover:enabled{
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* 02-timer */
+
+.timer__container {
+  border: 2px solid black;
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-size: 48px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.timer-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100px;
+}
+
+.timer-controls input{
+  font-size: 24px;
+}
+
+.timer-controls button{
+  flex-basis: 50px;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  transition: all 500ms ease-out 0ms;
+}
+
+.timer-controls button:enabled:hover {
+  background-color: #d4d4d4;
+}
+
+.timer__container input:disabled {
+  cursor: default;
+  opacity: 50%;
+}
+
+.timer__container button:disabled {
+  cursor: default;
+  background-color: transparent;
+}
+
+.timer {
+  text-transform: uppercase;
+}
+
+.timer__container .value {
+  font-family: 'Courier New', Courier, monospace, serif;
+  font-size: 56px;
+  font-weight: 600;
+}
+
+/* 03-promises */
+
+.form {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.form label {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.form input {
+  flex-grow: 1;
+  width: 100px;
+  font-size: 20px;
+}
+
+.form button {
+  display: block;
+  margin-top: 32px;
+  width: 100%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.form button:disabled{
+  cursor: not-allowed;
+}
+
