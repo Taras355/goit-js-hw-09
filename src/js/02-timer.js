@@ -46,6 +46,8 @@ function onStart() {
         const timeDiff = userDate - new Date();
         if (timeDiff <= 0) {
             clearInterval(intervalId);
+            startEl.removeAttribute("disabled");
+            inputEl.removeAttribute("disabled");
             return;
         }
         const time = convertMs(timeDiff);
